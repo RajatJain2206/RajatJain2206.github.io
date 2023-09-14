@@ -1,4 +1,4 @@
-![New Project](https://github.com/RajatJain2206/RajatJain2206.github.io/assets/123946735/83a2d842-6e52-463a-86f9-3f90201107a4)<h1>Digital Alarm Clock Project</h1>
+<h1>Digital Alarm Clock Project</h1>
 <h2>Project for NSS</h2>
 <h3>✨Introduction</h3>
 
