@@ -1,0 +1,285 @@
+ *{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins',sans-serif;
+  box-sizing: border-box;
+} 
+
+.pagebg{
+  width:100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg,#08001f,#30197d);
+  color: #fff;
+  position: relative;
+}
+
+.container{
+  width: 800px;
+  height: 190px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+.clock{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(235, 0, 255, 0.11);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.clock span{
+  font-size: 80px;
+  width: 110px;
+ text-align: center;
+  position: relative;
+  display: inline-block;
+
+}
+
+.clock span::after{
+ 
+  font-size: 16px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+#hrs::after{
+  content: 'HOURS';
+}
+
+#mins::after{
+  content: 'MINS';
+}
+
+#secs::after{
+  content: 'SECS';
+}
+
+
+/* CSS */
+#btn {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+#btn:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+#btn {
+    padding: 0 2.6rem;
+  }
+}
+
+.alarm{
+  position: fixed;
+  width: 600px;
+  height: 300px;;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid #30197d ;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: black;
+  width: 600px;
+  max-width: 75%;
+}
+
+.alarm.active{
+  transform: translate(-50%,-50%) scale(1);
+}
+.alarm-header{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid yellow;
+  
+}
+
+
+
+.alarm-header .set{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 240px;
+  color: white;
+}
+
+.alarm-header #close-button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.alarm-body{
+  padding: 10px 15px;
+  
+}
+
+#overlay{
+  position: fixed;
+   opacity: 0; 
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+body, .content, .column{
+  display: flex;
+  align-items: center;
+ 
+  justify-content: center;
+  
+}
+
+.alarm-body.content{
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+
+.content.column{
+
+  border-radius: 5px;
+  
+  padding: 10px 15px;
+  width: calc(100%/3 - 5px );
+}
+
+.column select{
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  padding: 0px 40px;
+}
+
+
+
+
+
+
+/* CSS */
+.alarm .button-13 {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+.button-13:hover {
+  background-color: #f7fafa;
+}
+
+.button-13:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.stop {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.stop:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+.stop {
+    padding: 0 2.6rem;
+  }
+}

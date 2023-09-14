@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Alarm Clock</title>
+  <link rel="Stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="pagebg">
+    <button class="stop">Stop Alarm</button>
+    <div class="container">
+      <div class="clock">
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="mins">00</span>
+        <span>:</span>
+        <span id="secs">00</span>
+      </div>
+     
+    </div>
+    <button data-open-target="#alarm" type="button" id="btn">Set Alarm</button>
+    <div class="alarm" id="alarm">
+      <div class="alarm-header">
+        <div class="set">Alarm</div>
+        <button data-close-button class="close-button" id="close-button">&times;</button>
+      </div>
+
+      <div class="alarm-body">
+        <div class="content">
+          <div class="column">
+            <select>
+              <option value="Hour" selected hidden>Hour</option>
+              
+            </select>
+           </div>
+
+           <div class="column">
+            <select>
+              <option value="Minutes" selected hidden>Mins</option>
+              
+            </select>
+           </div>
+  
+         
+            
+          <div class="column">
+            <select>
+              <option value="Seconds" selected hidden>Secs</option>
+              
+            </select>
+          </div>
+  
+          
+           
+            
+          
+          
+         </div>
+        
+       
+      </div>
+      
+      <button class="button-13" role="button">SET</button>
+   </div>
+   
+  </div>
+  <div id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
